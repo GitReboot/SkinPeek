@@ -21,7 +21,6 @@ jobs:
         run: |
           docker buildx build \
                   --tag ghcr.io/GitReboot/skinpeek/skinpeek:latest \
-                  --tag ghcr.io/GitReboot/skinpeek/skinpeek:"$GITHUB_SHA" \
                   --platform linux/amd64,linux/arm64/v8 \
                   --file ./Dockerfile \
                   --output type=image,push=true .
