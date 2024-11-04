@@ -20,8 +20,8 @@ jobs:
       - name: Build and Push Image
         run: |
           docker buildx build \
-                  --tag ghcr.io/giorgi-o/skinpeek/skinpeek:latest \
-                  --tag ghcr.io/giorgi-o/skinpeek/skinpeek:"$GITHUB_SHA" \
+                  --tag ghcr.io/GitReboot/skinpeek/skinpeek:latest \
+                  --tag ghcr.io/GitReboot/skinpeek/skinpeek:"$GITHUB_SHA" \
                   --platform linux/amd64,linux/arm64/v8 \
                   --file ./Dockerfile \
                   --output type=image,push=true .
